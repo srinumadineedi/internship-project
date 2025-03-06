@@ -1,0 +1,341 @@
+🌍 General Styles
+* {
+  margin: 0%;
+  padding: auto;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+  box-sizing: border-box;
+}
+.home-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+/* 🌙 Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* 📌 Navbar */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #222;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 1000;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navbar Items */
+.navbar-items {
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar Links */
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.nav-item .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.nav-item .nav-link:hover {
+  color: #ff9800;
+}
+
+/* 🌙 Dark Mode Icon (Fixed Properly) */
+.theme-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: yellow;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  position: relative;
+}
+
+.theme-icon:hover {
+  color: white;
+}
+
+/* 🏡 Hero Section (Fixed Size & Centered) */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Increased height for better visibility */
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Slight dark overlay */
+  display: flex;
+  justify-content: flex-start; /* Moves content to the left */
+  align-items: center;
+  text-align: left;
+  padding-left: 1%; /* Adjust spacing from the left */
+}
+
+.hero-overlay h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  line-height: 1.2; /* Keeps text spacing balanced */
+  max-width: 40%; /* Prevents text from stretching too much */
+  white-space: nowrap; /* Ensures text stays in two lines */
+}
+
+/* 📢 Sections */
+.services-section {
+  padding: 3rem 2rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+}
+
+/* View All Button */
+.view-all-btn,
+.view-all-btn-alt {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.view-all-btn:hover,
+.view-all-btn-alt:hover {
+  background-color: #e68900;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  background-color: #ffcc80;
+}
+
+/* Dark Mode Service Cards */
+body.dark-mode .service-card {
+  background-color: #222;
+  color: white;
+}
+
+body.dark-mode .service-card:hover {
+  background-color: #444;
+}
+
+/* 📌 Footer */
+.footer {
+  height: 50vh;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+}
+
+/* 🏡 Hero Section - Full Screen Fix */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* 🖼 Hero Image - Cover Entire Screen */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure it covers without distortion */
+}
+
+/* 📝 Overlay Text Centered */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Slight dark overlay for better text visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* 📌 Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Footer Columns */
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Footer Column */
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 1rem;
+}
+
+/* Footer Heading */
+.footer-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Footer Links */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Columns */
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0 5%; /* Adds some spacing from left & right */
+}
+
+/* Move Discover Section Slightly Right */
+.footer-column:nth-child(2) {
+  margin-left: 30px; /* Adjust this value as needed */
+}
+
+/* Footer Social Icons */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #ff9800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-column {
+    text-align: center;
+  }
+}
